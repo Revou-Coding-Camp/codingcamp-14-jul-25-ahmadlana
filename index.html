@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project RevoU 2025 [Lana]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="name-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2 class="modal-title">Masukkan Nama Anda</h2>
+            <form id="name-form" class="modal-form" autocomplete="off">
+                <input type="text" id="modal-username" class="modal-input" placeholder="Nama Anda" required autofocus>
+                <button type="submit" class="modal-btn">OK</button>
+            </form>
+        </div>
+    </div>
+    <canvas id="star-canvas"></canvas>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/PP.png" alt="Logo" height="44">
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu"><i class='bx bx-menu'></i></button>
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#portofolio">Portofolio</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="home-section">
+            <div class="home-content">
+                <h1>Hai <span id="username-placeholder">...</span>, Welcome to My Website</h1>
+                <p>Mini Project RevoU 2025.</p>
+            </div>
+        </section>
+        <!-- Profile Section -->
+        <section id="profile" class="profile-section">
+            <h2 class="section-title">Our <span>Profile</span></h2>
+            <div class="card-row">
+                <div class="profile-card">
+                    <img src="images/PP.png" alt="Project Photography" class="profile-img">
+                    <h3>Project Photography.</h3>
+                    <p>"Menangkap Momen, Menciptakan Cerita, Menghubungkan Perspektif"</p>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-img-icon"><i class='bx bxs-camera'></i></div>
+                    <h3>About Company</h3>
+                    <p>Kata "Project" melambangkan kolaborasi, tujuan bersama, dan proses kreatif yang dinamis. Sementara "Photography" adalah seni mengabadikan realita dengan makna. Gabungan keduanya mencerminkan sebuah tim yang tidak hanya mengambil gambar, tetapi juga menjalankan setiap sesi pemotretan sebagai sebuah proyek—direncanakan dengan visi, dieksekusi dengan passion, dan diakhiri dengan hasil yang bermakna.</p>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-img-icon"><i class='bx bx-target-lock'></i></div>
+                    <h3>Vision and Mission</h3>
+                    <ul>
+                        <li><strong>Vision:</strong> Menjadi wadah kreatif yang menginspirasi melalui karya fotografi, menghubungkan cerita, dan mengabadikan momen dengan perspektif yang unik serta bermakna.</li>
+                        <li><strong>Mission:</strong> Megembangkan Kreativitas, Menciptakan Karya yang Bermakna, Berbagi Pengetahuan, Mendokumentasikan Momen Bahagia, Membangun Komnunitas yang Kolaboratif, Berinovasi dalam Teknologi Visual.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Portofolio Section -->
+        <section id="portofolio" class="profile-section">
+            <h2 class="section-title">Our <span>Portofolio</span></h2>
+            <div class="porto-gallery porto-card-grid">
+                <div class="porto-card">
+                    <img src="images/1.jpg" alt="Portofolio 1" class="porto-img">
+                    <div class="porto-caption">Portofolio 1</div>
+                </div>
+                <div class="porto-card">
+                    <img src="images/2.jpg" alt="Portofolio 2" class="porto-img">
+                    <div class="porto-caption">Portofolio 2</div>
+                </div>
+                <div class="porto-card">
+                    <img src="images/3.jpg" alt="Portofolio 3" class="porto-img">
+                    <div class="porto-caption">Portofolio 3</div>
+                </div>
+                <div class="porto-card">
+                    <img src="images/4.jpg" alt="Portofolio 4" class="porto-img">
+                    <div class="porto-caption">Portofolio 4</div>
+                </div>
+                <div class="porto-card">
+                    <img src="images/5.jpg" alt="Portofolio 5" class="porto-img">
+                    <div class="porto-caption">Portofolio 5</div>
+                </div>
+                <div class="porto-card">
+                    <img src="images/6.jpg" alt="Portofolio 6" class="porto-img">
+                    <div class="porto-caption">Portofolio 6</div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-flex">
+                <form id="contact-form" class="contact-form" autocomplete="off">
+                    <label for="contact-name">Nama :</label>
+                    <input type="text" id="contact-name" name="name" placeholder="Nama" required>
+
+                    <label for="contact-date">Tanggal Lahir :</label>
+                    <input type="date" id="contact-date" name="date" placeholder="Pilih tanggal lahir" required>
+
+                    <label>Jenis Kelamin :</label>
+                    <div class="gender-group">
+                        <label><input type="radio" name="gender" value="Laki-Laki" required> Laki-Laki</label>
+                        <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+                    </div>
+
+                    <label for="contact-message">Pesan :</label>
+                    <textarea id="contact-message" name="message" placeholder="Pesan" rows="4" required></textarea>
+
+                    <button type="submit" class="contact-btn">Submit</button>
+                </form>
+                <div class="contact-result" id="contact-result"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">Created By Lana</div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
